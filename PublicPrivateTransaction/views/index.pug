@@ -1,13 +1,25 @@
 extends layout
 
 block content
-  a(href='https://github.com/anders94/blockchain-demo/')
-    img.github-ribbon(src='/images/fork-me-on-github-ribbon.png', alt='Fork me on GitHub')
-  .container
-    h1 Blockchain Demo: #{__('Public / Private Keys')} &amp; #{__('Signing')} 
-    .embed-responsive.embed-responsive-16by9
-      iframe.embed-responsive-item(src='https://www.youtube.com/embed/xIDL_akeras')
+  .container(style="padding: 60px 20px; background: linear-gradient(135deg, #e0f7fa, #e3f2fd); font-family: 'Poppins', sans-serif; color: #333; border-radius: 10px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); max-width: 900px; margin: 40px auto;")
+    h1(style="font-size: 3rem; font-weight: 700; color: #2c3e50; margin-bottom: 20px;") Welcome to the ML-Based Automated Blockchain System 🌟
+    p.lead(style="font-size: 1.3rem; color: #34495e; margin-bottom: 30px;") Revolutionizing blockchain with AI-driven automation and enhanced security.
+    img(src='/images/newimage.png', alt='Blockchain System', class='img-fluid rounded', style="max-width: 50%; height: auto; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);")
+    p(style="font-size: 1.15rem; margin-bottom: 20px; font-weight: 500;") Key Features of Our Platform:
+    ul(style="list-style: none; padding: 0; max-width: 700px; margin: 0 auto;")
+      li(style="display: flex; align-items: center; margin-bottom: 15px; font-size: 1.1rem;")
+        span(style="font-size: 1.5rem; color: #007bff; margin-right: 10px;") ✔️
+        | AI-powered transaction validation for unmatched efficiency.
+      li(style="display: flex; align-items: center; margin-bottom: 15px; font-size: 1.1rem;")
+        span(style="font-size: 1.5rem; color: #007bff; margin-right: 10px;") ✔️
+        | State-of-the-art scalability and security measures.
+      li(style="display: flex; align-items: center; margin-bottom: 15px; font-size: 1.1rem;")
+        span(style="font-size: 1.5rem; color: #007bff; margin-right: 10px;") ✔️
+        | Seamless user experience with intuitive design.
     br
-    p.pull-right by 
-      a(href='http://andersbrownworth.com/') Anders Brownworth 
-      | 1K3NvcuZzVTueHW1qhkG2Cm3viRkh2EXJp
+    p(style="font-size: 1.2rem; margin-bottom: 30px; color: #34495e;") Join us on this journey to revolutionize blockchain systems with cutting-edge technology.
+    a.btn(style="background-color: #2ecc71; color: #fff; padding: 14px 28px; font-size: 1.2rem; border-radius: 30px; text-transform: uppercase; text-decoration: none; box-shadow: 0 4px 10px rgba(46, 204, 113, 0.4); transition: 0.3s ease;") Explore Now
+    br
+    br
+    footer.text-center(style="margin-top: 50px; color: #555; font-size: 0.9rem;")
+      p &copy; 2024 ML Blockchain Team. Building the future of blockchain.

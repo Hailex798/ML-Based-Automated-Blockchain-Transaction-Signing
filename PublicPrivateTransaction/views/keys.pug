@@ -3,6 +3,7 @@ extends layout
 block content
   .container
 
+    // Public/Private Key Card
     .card
       h4.card-header #{__('Public / Private Key Pairs')} 
       .card-body
@@ -12,10 +13,44 @@ block content
             .input-group
               input.form-control#privateKey(aria-label='Private Key', type='number')
               span.input-group-btn
-                button.btn.btn-secondary#randomButton(type='button', ) #{__('Random')} 
+                button.btn.btn-secondary#randomButton(type='button') #{__('Random')} 
           .form-group
             label.control-label(for='data') #{__('Public Key')} 
             input#publicKey.form-control(disabled)
+
+    // Transaction Data Table
+    if transactions && transactions.length > 0
+      .card.mt-4
+        h4.card-header #{__('Transaction Data')} 
+        .card-body
+          table.table.table-striped
+            thead
+              tr
+                th #{__('Hash')}
+                th #{__('From')}
+                th #{__('To')}
+                th #{__('Value (Ether)')}
+                th #{__('Gas Price (Gwei)')}
+                th #{__('Block Number')}
+                th #{__('Block Hash')}
+                th #{__('Timestamp')}
+                th #{__('Gas Used')}
+                th #{__('Confirmations')}
+            tbody
+              each transaction in transactions
+                tr
+                  td= transaction.hash
+                  td= transaction.from
+                  td= transaction.to
+                  td= parseFloat(transaction.value / 1e18).toFixed(5)
+                  td= parseFloat(transaction.gasPrice / 1e9).toFixed(5) 
+                  td= transaction.blockNumber
+                  td= transaction.blockHash
+                  td= new Date(transaction.timeStamp * 1000).toLocaleString()
+                  td= transaction.gasUsed
+                  td= transaction.confirmations
+    else
+      .alert.alert-warning.mt-4 #{__('No transactions available.')}
 
   script.
     var EC = elliptic.elliptic().ec;

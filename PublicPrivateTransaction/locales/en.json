@@ -33,5 +33,6 @@
 	"Transaction": "Transaction",
 	"Tx": "Tx",
 	"Verify": "Verify",
-	"Public / Private": "Public / Private"
+	"Public / Private": "Public / Private",
+	"No transactions available.": "No transactions available."
 }
